@@ -2,7 +2,11 @@
 module.exports = {
   content: ["*"],
   theme: {
-    extend: {},
+    extend: {
+      animation: {
+        "bounce": "bounce 3s linear infinite",
+      },
+    },
   },
   plugins: [],
 };
