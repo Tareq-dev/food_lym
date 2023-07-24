@@ -5,62 +5,192 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
         <link rel="stylesheet" href="/css/tailwind.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Righteous&display=swap"
+            rel="stylesheet">
+        <style>
+            .font-caveat{
+                font-family: 'Caveat',Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            }
+            @keyframes zoom-in-out {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.2);
+      }
+    }
+
+    .animate-zoom {
+      animation: zoom-in-out 10s infinite;
+    }
+    .image-container::before {
+      content: "";
+      display: block;
+      margin-top: 7.5%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity here (0.3 for 30%) */
+      z-index: 1;
+    }
+          </style>
+
     </head>
     <body>
+        <!-- bg-[url('/img/bg-destop1.jpeg')]  -->
+        <header>
 
-        <header
-            class="bg-black bg-[url('/img/bg-destop1.jpeg')] h-[835px] bg-cover bg-center  z-0">
-            <nav
-                class=" text-white flex uppercase justify-between items-center py-8 container mx-auto z-10">
-                <img src="./img/nav_logo.svg" alt="logo">
-                <ul class="flex gap-4 text-xl font-bold">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Menu</a></li>
-                    <li><a href="#">Shop</a></li>
-                    <li><a href="#">Pages</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-                <div class="flex items-center gap-5">
-
-                    <div>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                            viewBox="0 0 24 24" stroke-width="1.5"
-                            stroke="currentColor" class="w-10 h-10">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
-                        </svg>
-                    </div>
-                    <div>
-                        <svg xmlns="http://www.w3.org/2000/svg"
-                            class="w-10 h-10" fill="currentColor"
-                            class="bi bi-cart"
-                            viewBox="0 0 16 16"> <path
-                                d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
-                        </svg>
-                    </div>
-                    <button class="bg-[#FF0600] px-4 py-4 rounded-md text-black">Book
-                        A
-                        Table</button>
-                </div>
-            </nav>
-            <hr>
-            <section
-                class="relative">
+            <section class="relative ">
                 <div
-                    class="top-0 left-0 bg-[#000000fa]	opacity-50 h-[700px] ">
-
+                    class="min-h-screen flex items-center justify-center bg-gray-800 overflow-x-hidden overflow-y-hidden">
+                    <div class="relative image-container">
+                        <img class="w-[1533px] animate-zoom "
+                            src="/img/bg-destop1.jpeg"
+                            alt="Background Image" />
+                        <!-- Add any other content you want to overlay here -->
+                    </div>
                 </div>
-                <div
-                    class="text-white justify-center text-center flex flex-col items-center absolute inset-0">
-                    <p class="text-[44px] font-semibold">Special Fast Food
-                        Resturant</p>
-                    <h1
-                        class="uppercase font-extrabold text-9xl ">Chicken
-                        Fry <br> with
-                        souce</h1>
+                <div class>
+                    <nav
+                        class="text-white flex uppercase justify-between items-center ml-8 pb-3 pt-8 container top-0  border-b absolute">
+                        <img src="./img/nav_logo.svg" alt="logo">
+                        <ul class="flex gap-6 text-xl font-bold">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Menu</a></li>
+                            <li><a href="#">Shop</a></li>
+                            <li><a href="#">Pages</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                        <div class="flex items-center gap-7">
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24" stroke-width="1.5"
+                                    stroke="currentColor" class="w-10 h-10">
+                                    <path stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    class="w-10 h-10" fill="currentColor"
+                                    class="bi bi-cart"
+                                    viewBox="0 0 16 16"> <path
+                                        d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                                </svg>
+                            </div>
+                            <button
+                                class="bg-[#FF0600] px-4 py-4 rounded-md text-white font-bold">Book
+                                A
+                                Table</button>
+                        </div>
+                    </nav>
+                    <div
+                        class="text-white justify-center text-center z-10 flex flex-col items-center absolute top-1/2 inset-x-0">
+                        <p class="text-[35px] font-bold pb-8 font-caveat">Special
+                            Fast Food
+                            Resturant</p>
+                        <h1
+                            class="uppercase font-extrabold text-6xl ">Chicken
+                            Fry <br> with
+                            souce</h1>
+                    </div>
                 </div>
 
             </section>
+
         </header>
+        <main>
+            <!-- Category Section -->
+            <section class="py-8 px-8">
+                <div class="flex items-center">
+                    <img class="mr-60 object-contain"
+                        src="/img//category-tomato.png" alt>
+                    <div class="text-center">
+                        <p class="font-caveat text-2xl">Best Food For family</p>
+                        <h2 class="font-bold text-4xl">Choose Your Best
+                            Category</h2>
+                    </div>
+                </div>
+                <div class="my-8 flex justify-center items-center gap-6">
+                    <img class="border-2 hover:border-red-400 rounded-md p-4"
+                        src="/img/burger-1.png"
+                        alt>
+                    <img class="border-2 hover:border-red-400 rounded-md p-4"
+                        src="/img/burger-1.png"
+                        alt>
+                    <img class="border-2 hover:border-red-400 rounded-md p-4"
+                        src="/img/burger-1.png"
+                        alt>
+                    <img class="border-2 hover:border-red-400 rounded-md p-4"
+                        src="/img/burger-1.png"
+                        alt>
+                    <img class="border-2 hover:border-red-400 rounded-md p-4"
+                        src="/img/burger-1.png"
+                        alt>
+                    <img class="border-2 hover:border-red-400 rounded-md p-4"
+                        src="/img/burger-1.png"
+                        alt>
+                </div>
+                <div class="flex justify-center items-center w-full py-10">
+                    <img class="object-cover w-1/2 p-20"
+                        src="/img/categoty-aside.png"
+                        alt>
+                    <div class="w-1/2">
+                        <p
+                            class="font-caveat text-red-500 font-extrabold text-2xl">About
+                            Our Company</p>
+                        <div class="flex justify-between items-center">
+                            <h3 class="font-extrabold text-3xl my-4">We Always
+                                Trying Quality <br> Healthy Foods</h3>
+                            <img src="/img/leaf-pair.png" alt>
+                        </div>
+                        <p
+                            class="text-sm py-6 text-justify pr-48 text-gray-400 font-semibold">Lorem,
+                            ipsum dolor sit amet
+                            consectetur adipisicing
+                            elit. Quo est odio et sed debitis nemo ipsa neque,
+                            nesciunt delectus.</p>
+                        <div
+                            class="flex justify-between mb-8 items-center bg-orange-100 p-2 mr-40 rounded-lg">
+                            <img
+                                class="bg-pink-200 p-4 mr-6 rounded-full h-20 w-20"
+                                src="/img/award.svg" alt>
+                            <div class>
+                                <h5 class="font-bold text-2xl">Awards Wining</h5>
+                                <p class="text-sm font-semibold">Lorem, ipsum
+                                    dolor sit amet consectetur
+                                    adipisicing
+                                    elit. Quo est odio et sed debitis nemo ipsa
+                                    neque,
+                                    nesciunt delectus.</p>
+                            </div>
+                        </div>
+                        <ul>
+                            <li>✔ We are Experienced in serve Resturant</li>
+                            <li>✔ We are Experienced in serve Resturant</li>
+                        </ul>
+                        <div class="flex gap-10 my-8 mr-40">
+                            <button
+                                class="text-white bg-red-500 px-2 py-1 font-bold rounded">Learn
+                                More ..</button>
+                            <div class="flex">
+                                <img class="pr-4" src="/img/ceo.png" alt>
+                                <div>
+                                    <h5 class="text-2xl font-bold">Nazmus Sakib</h5>
+                                    <p>Founder CEO</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
     </body>
 </html>
