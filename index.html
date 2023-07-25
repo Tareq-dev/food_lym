@@ -55,7 +55,7 @@
           </style>
 
     </head>
-    <body>
+    <body class="container mx-auto">
 
         <header>
             <section class="relative ">
@@ -73,7 +73,7 @@
                 </div>
                 <div class>
                     <nav
-                        class="text-white flex uppercase justify-between items-center px-4 md:ml-8 pb-3 pt-8 container top-0  border-b absolute">
+                        class="text-white flex uppercase justify-between items-center px-4 pb-3 pt-8 container top-0  border-b absolute">
                         <img class="w-14 md:w-28" src="./img/nav_logo.svg"
                             alt="logo">
                         <ul class="md:flex gap-6 text-xl font-bold hidden ">
@@ -105,7 +105,7 @@
                                 </svg>
                             </div>
                             <button
-                                class="bg-[#FF0600] md:px-4 md:py-4 px-2 py-1 rounded-md text-white md:font-bold">Book
+                                class="bg-[#FF0600] hidden md:block md:px-4 md:py-4 px-2 py-1 rounded-md text-white md:font-bold">Book
                                 A
                                 Table</button>
                         </div>
@@ -129,8 +129,9 @@
         <main>
             <!-- Category Section -->
             <section class="my-16 px-4 md:px-8">
-                <div class="flex-col md:flex items-center">
-                    <img class="w-20 md:mr-60 object-contain animate-bounce"
+                <div class="flex-col items-center">
+                    <img
+                        class="w-20 md:w-40 md:mr-60 object-contain animate-bounce"
                         src="/img//category-tomato.png" alt>
                     <div class="text-center">
                         <p class="font-caveat text-2xl">Best Food For family</p>
@@ -139,17 +140,8 @@
                     </div>
                 </div>
                 <div
-                    class="my-8   md:flex justify-center items-center gap-6">
-                    <div
-                        class="flex-col items-center mb-4 justify-center border shadow hover:border-red-400 rounded-md py-8 px-14">
-                        <div class="flex justify-center">
-                            <img
-                                class="w-28"
-                                src="/img/burger-1.png"
-                                alt>
-                        </div>
-                        <p class="text-2xl font-bold text-center">Beef Burger</p>
-                    </div>
+                    class="my-8 md:flex justify-center items-center gap-6">
+
                     <div
                         class="flex-col items-center mb-4  mb-4justify-center border shadow hover:border-red-400 rounded-md py-8 px-14">
                         <div class="flex justify-center">
@@ -193,7 +185,7 @@
                     </div>
 
                 </div>
-                <div class="md:flex justify-center items-center w-full py-10">
+                <div class="md:flex justify-center items-center w-full py-4 md:py-10">
                     <img class="object-cover md:w-1/2 md:p-20"
                         src="/img/categoty-aside.png"
                         alt>
@@ -202,7 +194,8 @@
                             class="font-caveat text-red-500 font-extrabold text-4xl my-8 md:my-4">About
                             Our Company</p>
                         <div class="flex justify-between items-center">
-                            <h3 class="font-extrabold md:text-3xl my-4">We Always
+                            <h3 class="font-extrabold md:text-3xl my-4">We
+                                Always
                                 Trying Quality <br> Healthy Foods</h3>
                             <img class="animate-bounce w-16"
                                 src="/img/leaf-pair.png"
@@ -221,7 +214,9 @@
                                 src="/img/award.svg" alt>
                             <div class>
                                 <h5 class="font-bold text-2xl">Awards Wining</h5>
-                                <p class="text-xs text-justify md:text-sm font-semibold">Lorem, ipsum
+                                <p
+                                    class="text-xs text-justify md:text-sm font-semibold">Lorem,
+                                    ipsum
                                     dolor sit amet consectetur
                                     adipisicing
                                     elit. Quo est odio et sed debitis nemo ipsa
@@ -233,14 +228,17 @@
                             <li>✔ We are Experienced in serve Resturant</li>
                             <li>✔ We are Experienced in serve Resturant</li>
                         </ul>
-                        <div class="flex gap-10 my-8 mr-40">
+                        <div
+                            class="flex justify-between md:gap-10 my-8 md:mr-40">
                             <button
-                                class="text-white bg-red-500 px-4 text-lg font-bold rounded">Learn
+                                class="text-white bg-red-500 px-2 py-1 md:px-4 text-lg font-bold rounded">Learn
                                 More ..</button>
-                            <div class="flex">
-                                <img class="pr-4" src="/img/ceo.png" alt>
+                            <div class="flex items-center justify-center">
+                                <img class="mr-4 md:mr-4 w-10 h-10"
+                                    src="/img/ceo.png" alt>
                                 <div>
-                                    <h5 class="text-2xl font-bold">Nazmus Sakib</h5>
+                                    <h5 class="md:text-2xl font-bold">Nazmus
+                                        Sakib</h5>
                                     <p>Founder CEO</p>
                                 </div>
                             </div>
