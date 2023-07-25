@@ -29,7 +29,7 @@
     .image-container::before {
       content: "";
       display: block;
-      margin-top: 7.5%;
+      margin-top: 6.5%;
       position: absolute;
       top: 0;
       left: 0;
@@ -38,40 +38,58 @@
       background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity here (0.3 for 30%) */
       z-index: 1;
     }
+    @media screen and (max-width: 500px) {
+        .image-container::before {
+      content: "";
+      display: block;
+      margin-top:18.5%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 85%;
+      background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity here (0.3 for 30%) */
+      z-index: 1;
+    }
+}
           </style>
 
     </head>
     <body>
         <!-- bg-[url('/img/bg-destop1.jpeg')]  -->
         <header>
-
             <section class="relative ">
                 <div
-                    class="min-h-screen flex items-center justify-center bg-gray-800 overflow-x-hidden overflow-y-hidden">
+                    class="md:min-h-screen flex items-center justify-center bg-gray-800 overflow-x-hidden overflow-y-hidden">
                     <div class="relative image-container">
-                        <img class="w-[1533px] animate-zoom "
+                        <img class="md:w-[1533px] hidden md:block animate-zoom "
                             src="/img/bg-destop1.jpeg"
+                            alt="Background Image" />
+                        <img class="block  md:hidden animate-zoom "
+                            src="/img/bg-mobile.jpeg"
                             alt="Background Image" />
                         <!-- Add any other content you want to overlay here -->
                     </div>
                 </div>
                 <div class>
                     <nav
-                        class="text-white flex uppercase justify-between items-center ml-8 pb-3 pt-8 container top-0  border-b absolute">
-                        <img src="./img/nav_logo.svg" alt="logo">
-                        <ul class="flex gap-6 text-xl font-bold">
+                        class="text-white flex uppercase justify-between items-center px-4 md:ml-8 pb-3 pt-8 container top-0  border-b absolute">
+                        <img class="w-14 md:w-28" src="./img/nav_logo.svg"
+                            alt="logo">
+                        <ul class="md:flex gap-6 text-xl font-bold hidden ">
                             <li><a href="#">Home</a></li>
                             <li><a href="#">Menu</a></li>
                             <li><a href="#">Shop</a></li>
                             <li><a href="#">Pages</a></li>
                             <li><a href="#">Contact</a></li>
                         </ul>
-                        <div class="flex items-center gap-7">
+                        <div class="flex items-center gap-3 md:gap-7">
                             <div>
                                 <svg xmlns="http://www.w3.org/2000/svg"
                                     fill="none"
                                     viewBox="0 0 24 24" stroke-width="1.5"
-                                    stroke="currentColor" class="w-10 h-10">
+                                    stroke="currentColor"
+                                    class="w-6 md:w-10 h-6 md:h-10">
                                     <path stroke-linecap="round"
                                         stroke-linejoin="round"
                                         d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
@@ -79,25 +97,27 @@
                             </div>
                             <div>
                                 <svg xmlns="http://www.w3.org/2000/svg"
-                                    class="w-10 h-10" fill="currentColor"
+                                    class="w-6 md:w-10 h-6 md:h-10"
+                                    fill="currentColor"
                                     class="bi bi-cart"
                                     viewBox="0 0 16 16"> <path
                                         d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
                                 </svg>
                             </div>
                             <button
-                                class="bg-[#FF0600] px-4 py-4 rounded-md text-white font-bold">Book
+                                class="bg-[#FF0600] md:px-4 md:py-4 px-2 py-1 rounded-md text-white md:font-bold">Book
                                 A
                                 Table</button>
                         </div>
                     </nav>
                     <div
                         class="text-white justify-center text-center z-10 flex flex-col items-center absolute top-1/2 inset-x-0">
-                        <p class="text-[35px] font-bold pb-8 font-caveat">Special
+                        <p
+                            class="text-[25px] md:text-[35px] font-bold pb-4 md:pb-8 font-caveat">Special
                             Fast Food
                             Resturant</p>
                         <h1
-                            class="uppercase font-extrabold text-6xl ">Chicken
+                            class="uppercase font-extrabold text-5xl md:text-6xl ">Chicken
                             Fry <br> with
                             souce</h1>
                     </div>
@@ -109,8 +129,8 @@
         <main>
             <!-- Category Section -->
             <section class="my-16 px-8">
-                <div class="flex items-center">
-                    <img class="mr-60 object-contain animate-bounce"
+                <div class="flex-col md:flex items-center">
+                    <img class="w-20 md:mr-60 object-contain animate-bounce"
                         src="/img//category-tomato.png" alt>
                     <div class="text-center">
                         <p class="font-caveat text-2xl">Best Food For family</p>
@@ -118,56 +138,66 @@
                             Category</h2>
                     </div>
                 </div>
-                <div class="my-8 flex justify-center items-center gap-6">
+                <div
+                    class="my-8   md:flex justify-center items-center gap-6">
                     <div
-                        class="flex-col items-center justify-center border shadow hover:border-red-400 rounded-md py-8 px-14">
-                       <div class="flex justify-center">
-                        <img
-                        class="w-28"
-                        src="/img/burger-1.png"
-                        alt>
-                       </div>
+                        class="flex-col items-center mb-4 justify-center border shadow hover:border-red-400 rounded-md py-8 px-14">
+                        <div class="flex justify-center">
+                            <img
+                                class="w-28"
+                                src="/img/burger-1.png"
+                                alt>
+                        </div>
                         <p class="text-2xl font-bold text-center">Beef Burger</p>
                     </div>
                     <div
-                        class="flex-col items-center justify-center border shadow hover:border-red-400 rounded-md py-8 px-14">
-                        <img
-                            class="w-28"
-                            src="/img/fast-food.png"
-                            alt>
+                        class="flex-col items-center mb-4  mb-4justify-center border shadow hover:border-red-400 rounded-md py-8 px-14">
+                        <div class="flex justify-center">
+                            <img
+                                class="w-28"
+                                src="/img/fast-food.png"
+                                alt>
+                        </div>
                         <p class="text-2xl font-bold text-center">Fast Foods</p>
                     </div>
                     <div
-                        class="flex-col items-center justify-center border shadow hover:border-red-400 rounded-md py-8 px-14">
-                        <img
-                            class="w-28"
-                            src="/img/vegitable.png"
-                            alt>
+                        class="flex-col items-center mb-4 justify-center border shadow hover:border-red-400 rounded-md py-8 px-14">
+                        <div class="flex justify-center">
+                            <img
+                                class="w-28"
+                                src="/img/vegitable.png"
+                                alt>
+                        </div>
+
                         <p class="text-2xl font-bold text-center">Vegetable</p>
                     </div>
                     <div
-                        class="flex-col items-center justify-center border shadow hover:border-red-400 rounded-md py-8 px-14">
-                        <img
-                            class="w-28"
-                            src="/img/fast-food (2).png"
-                            alt>
+                        class="flex-col items-center mb-4 justify-center border shadow hover:border-red-400 rounded-md py-8 px-14">
+                        <div class="flex justify-center">
+                            <img
+                                class="w-28"
+                                src="/img/fast-food (2).png"
+                                alt>
+                        </div>
                         <p class="text-2xl font-bold text-center">Sea Foods</p>
                     </div>
                     <div
-                        class="flex-col items-center justify-center border shadow hover:border-red-400 rounded-md py-8 px-14">
-                        <img
-                            class="w-28"
-                            src="/img/BarbeQ.png"
-                            alt>
+                        class="flex-col items-center mb-4 justify-center border shadow hover:border-red-400 rounded-md py-8 px-14">
+                        <div class="flex justify-center">
+                            <img
+                                class="w-28"
+                                src="/img/BarbeQ.png"
+                                alt>
+                        </div>
                         <p class="text-2xl font-bold text-center">Barbecue</p>
                     </div>
 
                 </div>
-                <div class="flex justify-center items-center w-full py-10">
-                    <img class="object-cover w-1/2 p-20"
+                <div class="md:flex justify-center items-center w-full py-10">
+                    <img class="object-cover md:w-1/2 md:p-20"
                         src="/img/categoty-aside.png"
                         alt>
-                    <div class="w-1/2">
+                    <div class="md:w-1/2">
                         <p
                             class="font-caveat text-red-500 font-extrabold text-4xl my-4">About
                             Our Company</p>
